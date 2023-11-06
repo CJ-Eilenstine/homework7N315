@@ -1,0 +1,28 @@
+.login-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: $site-yellow;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px 0;
+
+  .login {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  .sign-up {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+}

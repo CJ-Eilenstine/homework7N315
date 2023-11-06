@@ -1,0 +1,333 @@
+@font-face {
+  font-family: Caveat;
+  src: url(../assets/fonts/Caveat-Regular.ttf);
+}
+@font-face {
+  font-family: Caveat-Bold;
+  src: url(../assets/fonts/Caveat-Bold.ttf);
+}
+@font-face {
+  font-family: Lato-Light;
+  src: url(../assets/fonts/Lato/Lato-Light.ttf);
+}
+@font-face {
+  font-family: Lato-Italic;
+  src: url(../assets/fonts/Lato/Lato-Italic.ttf);
+}
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato/Lato-Regular.ttf);
+}
+@font-face {
+  font-family: Lato-Black;
+  src: url(../assets/fonts/Lato/Lato-Black.ttf);
+}
+@font-face {
+  font-family: Lato-Light-Italic;
+  src: url(../assets/fonts/Lato/Lato-LightItalic.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.site-wrapper {
+  position: relative;
+  min-height: 100vh;
+}
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 10px;
+  }
+}
+.nav-holder {
+  width: 100vw;
+  min-height: 100px;
+  background-color: transparent;
+  z-index: 999;
+}
+.nav-holder nav {
+  min-height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  z-index: 999;
+}
+.nav-holder .logo {
+  max-height: 55px;
+  z-index: 999;
+}
+.nav-holder ul {
+  width: 552.5px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  z-index: 999;
+}
+.nav-holder ul li a {
+  text-decoration: none;
+  font-family: Caveat;
+  font-size: 25px;
+  color: #000;
+}
+.nav-holder ul li .login {
+  padding: 10px 52px;
+  background-color: #ffd972;
+  border-radius: 80px;
+  box-shadow: 0px 10px 6px rgba(0, 0, 0, 0.16);
+}
+.nav-holder ul li .active {
+  border-bottom: solid #000 3px;
+}
+.nav-holder .hamburger {
+  margin: auto 0;
+  cursor: pointer;
+  display: none;
+  position: absolute;
+  top: 35px;
+  right: 40px;
+  max-height: 20px;
+  max-width: 32px;
+  z-index: 999;
+}
+.nav-holder .hamburger div {
+  width: 32px;
+  height: 2px;
+  background-color: #000;
+  margin: 6px 0;
+  transition: 0.8s;
+}
+.nav-holder .open .bar1 {
+  transform: rotate(-45deg) translate(-6px, 4px);
+  position: absolute;
+  z-index: 999;
+}
+.nav-holder .open .bar2 {
+  opacity: 0;
+  z-index: 999;
+}
+.nav-holder .open .bar3 {
+  transform: rotate(45deg) translate(-6px, -4px);
+  position: absolute;
+  z-index: 999;
+}
+.nav-holder .open .mobile-menu {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  z-index: 100;
+  background-color: rgb(252, 188, 184);
+  width: 100vw;
+}
+.nav-holder .mobile-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+}
+.nav-holder .mobile-menu li {
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 770px) {
+  .nav-holder nav ul {
+    display: none;
+  }
+  .nav-holder .hamburger {
+    display: block;
+  }
+}
+footer {
+  height: 50px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  position: sticky;
+  bottom: 0; /* Stick the footer to the bottom */
+  width: 100%; /* Full width */
+  z-index: 999;
+}
+footer .copyright {
+  font-size: 15px;
+  font-family: Lato-Italic;
+  color: #393939;
+  margin-right: 1rem;
+}
+footer .anchors {
+  font-family: Lato-Italic;
+  text-decoration: none;
+  font-size: 15px;
+  min-width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+footer .anchors a {
+  text-decoration: none;
+  color: #393939;
+  margin-right: 5px;
+  margin-right: 1rem;
+}
+footer .social {
+  height: 19px;
+  width: 4em;
+  display: flex;
+  justify-content: space-between;
+}
+footer .social img {
+  margin-right: 1rem;
+}
+
+@media screen and (max-width: 770px) {
+  footer .copyright {
+    font-size: 1rem;
+  }
+  footer .anchors {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  footer {
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    padding: 2rem 3rem;
+  }
+  footer .anchors {
+    justify-self: flex-end;
+    align-self: flex-end;
+  }
+  footer .social {
+    margin-right: 1rem;
+  }
+  footer .social img {
+    margin-right: 1rem;
+  }
+}
+.home-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(../assets/images/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.home-wrapper .home-title {
+  min-height: 360px;
+  min-width: 360px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffd972;
+  border-radius: 50%;
+  z-index: 99;
+}
+.home-wrapper .home-title h1 {
+  margin-bottom: 1rem;
+  font-size: 24px;
+  font-family: Caveat-Bold;
+}
+.home-wrapper .home-title p {
+  max-width: 162px;
+  font-family: Lato;
+  font-size: 13px;
+}
+.home-wrapper .welcome-home {
+  position: absolute;
+  min-width: 170px;
+  min-height: 170px;
+  top: 22%;
+  right: 31%;
+  background-color: #fcbcb8;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.home-wrapper .welcome-home p {
+  font-size: 10px;
+  font-family: Lato-Italic;
+  max-width: 106px;
+}
+
+@media screen and (max-width: 600px) {
+  .home-wrapper .home-title {
+    min-height: 260px;
+    min-width: 260px;
+    max-height: 260px;
+    max-width: 260px;
+  }
+  .home-wrapper .welcome-home {
+    position: absolute;
+    min-width: 122px;
+    min-height: 122px;
+    max-width: 122px;
+    max-height: 122px;
+    top: 18%;
+    right: 10%;
+  }
+  .home-wrapper .welcome-home p {
+    font-size: 8px;
+    width: 82px;
+  }
+}
+.login-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #ffd972;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 100px 0;
+}
+.login-wrapper .login {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.login-wrapper .sign-up {
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+/*# sourceMappingURL=styles.css.map */

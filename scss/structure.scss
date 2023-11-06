@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+.site-wrapper {
+  position: relative;
+  min-height: 100vh;
+  // background-image:linear-gradient(rgba(242,92,84,.6), rgba(242,92,84,.6)), url(../assets/images/hero.jpg);
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  //   margin: auto;
+
+  #app {
+    // margin-bottom: auto;
+    // margin-bottom: 50px;
+    // flex: 1;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  html {
+    font-size: 10px;
+  }
+}
